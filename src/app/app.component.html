@@ -1,0 +1,51 @@
+<!--<h1>Facebook</h1>
+<p>Login to facebook</p>
+
+<p><input type="text"
+       placeholder="Email address or Phone number"
+       [(ngModel)]="name1"
+       >
+</p>
+<p>
+<input type="text"
+       placeholder="Password"
+       [(ngModel)]="password"
+       >
+</p>
+<button
+  class="btn btn-primary"
+  >Login</button>
+
+<hr>
+<label>Username</label>
+<input type="text"
+       class="form-control"
+       [(ngModel)]="username">
+<p>{{username}}</p>
+<button class="btn btn-primary" 
+        [disabled]="username==''" 
+        (click)="username=''"
+        >Reset user</button>
+<hr>
+<button class="btn btn-primary" (click)=" onToggleDetails()">Display details</button>
+<p *ngIf="showsecret">mypassword=tuna</p>
+<div *ngFor= "let logItem of log; let i= index"
+      [ngStyle]="{backgroundColor : i >= 5 ? 'blue' : 'green'}">
+      {{ logItem }}</div>
+-->
+
+
+<div class="container">
+       <div class="row">
+         <div class="col-xs-12">
+           <app-cockpit></app-cockpit>
+         </div>
+       </div>
+       <hr>
+       <div class="row">
+         <div class="col-xs-12">
+           <app-serveselement  *ngFor="let serverelement of serverElements" 
+           [element]="serverelement"></app-serveselement>
+         </div>
+       </div>
+     </div>
