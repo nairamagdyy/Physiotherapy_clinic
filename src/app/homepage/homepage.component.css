@@ -1,0 +1,91 @@
+.container img{
+    width: 100%;
+    height: auto;
+}
+.container {
+    width: 100%;
+    height: auto;
+    background-color: #E9E9E9;
+  }
+.container .btn {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    background-color: #000080;
+    color: white;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+.container .btn:hover {
+    background-color: black;
+  }
+.info{
+    text-align: center;
+    color: black;
+    top: 20%;
+    left: 1%;
+    font-size: 50px;
+    padding: 16px 30px;
+    position: absolute;
+    font-family:cursive;
+  }
+.layer2{
+    background-color: white;
+    color: black;
+    font-family: cursive;
+    font-style: italic;
+    padding: 16px 30px;
+    left: 10%;
+  }
+#head{
+    font-size: 50px;
+    font-weight: 100;
+    color: black;
+  }
+#contin{
+    font-size: 1.2em;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    padding-left: 7%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  .layer3{
+    background-color: lightgray;
+
+  }
+  h1{
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: bold;
+  }
+  h3{
+    font-weight: bold;
+  }
+.layer3 img{
+  display: block;
+  width: 50px;
+  margin-left: 20%;
+}
+.layer4{
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
