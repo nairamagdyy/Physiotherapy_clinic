@@ -6,5 +6,8 @@ import { Component ,EventEmitter, Output} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  loadedfeature = 'home'
+  onNavigate(feature:string){
+    this.loadedfeature=feature;
+  }
 }

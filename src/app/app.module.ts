@@ -6,6 +6,7 @@ import { from } from 'rxjs';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './user/login/login.component';
 import { SignupComponent } from './user/signup/signup.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -15,7 +16,8 @@ import { SignupComponent } from './user/signup/signup.component';
     AppComponent,
     HomepageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

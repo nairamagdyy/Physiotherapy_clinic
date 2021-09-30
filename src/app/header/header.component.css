@@ -1,0 +1,40 @@
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000080;
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color: black;}
+  
+  ul.topnav li a.active {background-color: black;}
+  
+  ul.topnav li.right {
+      float: right;
+      font-weight: bold;
+    }
+#clinic-name{
+    text-align: center;
+    padding-right: 300px;
+    padding-left: 14px;
+    padding-top: 10px;
+    float: left;
+    text-align: center;
+    color: white;
+    font-size:20px;
+    font-style:oblique;
+}
+  
+
+  
