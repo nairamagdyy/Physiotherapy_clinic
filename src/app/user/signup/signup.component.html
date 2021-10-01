@@ -1,10 +1,47 @@
-<div class="col-md-12">
+<div class="layer1">
+<section>
+  <article class="welcome">
+    <h1>Welcome Back!</h1>
+    <div id="cont-welc">
+    <p>To keep conected with us please</p>
+    <p>login with you personal information</p>
+    </div>
+    <button class="btn" (click)="onselect('login')">Login</button>
+  </article>
+<article id="signup">
+  <p id="createaccount">Create Account</p>
     <div class="card card-container">
       <form
         name="form"
         #f="ngForm"
         novalidate
       >
+      <div class="form-group">
+        <label for="firstname">Firstname</label>
+        <input
+          type="text"
+          class="form-control"
+          name="firstname"
+          [(ngModel)]="form.firstname"
+          required
+          minlength="3"
+          maxlength="20"
+          #username="ngModel"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastname">Lastname</label>
+        <input
+          type="text"
+          class="form-control"
+          name="lastname"
+          [(ngModel)]="form.lastname"
+          required
+          minlength="3"
+          maxlength="20"
+          #username="ngModel"
+        />
+      </div>
         <div class="form-group">
           <label for="username">Username</label>
           <input
@@ -43,8 +80,10 @@
           />
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block">Sign Up</button>
+          <button class="btn">Sign Up</button>
         </div>
       </form>
     </div>
-  </div>
+  </article>
+</section>
+</div>

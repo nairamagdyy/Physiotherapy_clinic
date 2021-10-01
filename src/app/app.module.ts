@@ -7,6 +7,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './user/login/login.component';
 import { SignupComponent } from './user/signup/signup.component';
 import { HeaderComponent } from './header/header.component';
+import { TitleComponent } from './title/title.component';
 
 
 
@@ -17,7 +18,8 @@ import { HeaderComponent } from './header/header.component';
     HomepageComponent,
     LoginComponent,
     SignupComponent,
-    HeaderComponent
+    HeaderComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,

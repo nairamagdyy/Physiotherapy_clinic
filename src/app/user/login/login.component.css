@@ -1,0 +1,57 @@
+.layer1{
+    position: fixed;
+    left: 25%;
+    padding-top: 100px;
+    height: 1200px;
+    background-color: white;
+}
+h1{
+    font-weight: bold;
+}
+#myaccount{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #3EABD2;
+    padding-top: 110px;
+    padding-bottom: 16px;
+    font-family: cursive;
+}
+section {    
+    display: flex;
+    border-style: ridge;
+    height: 500px;
+  }
+
+.btn{
+    background-color: #3EABD2;
+    color: white;
+    border: black;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 16px;
+    width: 120px;
+    height: 38px;
+    font-family: cursive;
+}
+.welcome{
+    font-family: cursive;
+    background-color: lightgray;
+    color: black;
+    padding-left: 30px;
+    padding-right: 45px;
+    padding-top: 150px;
+    
+} 
+#cont-welc{
+    text-align: center;
+    font-family: cursive;
+    padding-top: 16px;
+}
+.form-group{
+    width: 350px;
+    padding-left: 50px;
+    padding-right: 50px;   
+}

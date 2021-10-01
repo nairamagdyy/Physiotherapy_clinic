@@ -1,3 +1,8 @@
 <app-header (featureselected)="onNavigate($event)"></app-header>
+<app-title *ngIf ="loadedfeature ==='title' "></app-title>
 <app-homepage *ngIf ="loadedfeature ==='home' "></app-homepage>
+<app-login *ngIf ="loadedfeature ==='login'"></app-login>
+
+<app-login (featureselected)="onNavigate($event)"></app-login>
 <app-signup *ngIf ="loadedfeature ==='signup'"></app-signup>
+

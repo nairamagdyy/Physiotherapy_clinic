@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-signup',
@@ -7,14 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
   form = {
+    firstname: "",
+    lastname : "",
     username: "",
     email: "",
     password: ""
   };
 
+  @Output() featureselected= new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onselect(feature:string){
+       this.featureselected.emit(feature);
   }
  
 
