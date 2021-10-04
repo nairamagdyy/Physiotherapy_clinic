@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'user', component: UserComponent },
   { path: 'survey', component: SurveyComponent },
-  { path: 'notfound', component: PagenotfoundComponent },
+  { path: 'notfound', component: PagenotfoundComponent }
 ];
 
 @NgModule({
