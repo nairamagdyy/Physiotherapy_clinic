@@ -10,14 +10,10 @@ export class LoginComponent implements OnInit {
     email: "",
     password: ""
   };
-  @Output() featureselected= new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-  onselect(feature:string){
-       this.featureselected.emit(feature);
   }
 
 }

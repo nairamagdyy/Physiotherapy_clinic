@@ -7,10 +7,14 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './user/login/login.component';
 import { SignupComponent } from './user/signup/signup.component';
 import { HeaderComponent } from './header/header.component';
-import { TitleComponent } from './title/title.component';
-
-
-
+import { AppRoutingModule } from './appRouting.module';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UserComponent } from './user/user.component';
+import { authInterceptorProviders } from './auth.interceptor';
+import { HttpClientModule } from '@angular/common/http';
+import { SurveyComponent } from './user/survey/survey.component';
+import { FooterComponent } from './footer/footer.component';
+import { SidenavComponent } from './user/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +23,19 @@ import { TitleComponent } from './title/title.component';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
-    TitleComponent
+    PagenotfoundComponent,
+    UserComponent,
+    SurveyComponent,
+    FooterComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

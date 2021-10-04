@@ -36,6 +36,7 @@ section {
     height: 38px;
     font-family: cursive;
 }
+
 .welcome{
     font-family: cursive;
     background-color: lightgray;
@@ -43,7 +44,6 @@ section {
     padding-left: 30px;
     padding-right: 45px;
     padding-top: 150px;
-    
 } 
 #cont-welc{
     text-align: center;

@@ -1,0 +1,87 @@
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">Survey Form</h1>
+    <p id="description" class="description text-center">
+      Thank you for taking the time to fill the form!
+    </p>
+  </header>
+  <form id="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name">Your Name</label>
+      <input type="text" name="name" id="name" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input type="email" name="email" id="email" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="number">Age</label>
+      <input type="number" name="age" id="number" min="10" max="99" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <p style="font-weight: bold;">Which option best describes your current role?</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select current role</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+        <option value="preferNo">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p style="font-weight: bold;">Gender</p>
+      <label style=" font-weight: normal;">
+        <input name="gender" value="Male" type="radio" class="input-radio" checked />Male</label>
+      <label style=" font-weight: normal;">
+        <input name="gender" value="Female" type="radio" class="input-radio" />Female</label>
+
+      <label style=" font-weight: normal;"><input name="gender" value="Prefer Not To Say" type="radio" class="input-radio" />Prefer Not To Say</label>
+    </div>
+
+
+    <div class="form-group">
+      <p style="font-weight: bold;">
+        What would you like to become? (Check all that apply)
+      </p>
+
+      <label style=" font-weight: normal;"><input name="prefer" value="front-end-dev" type="checkbox" class="input-checkbox" />Front-End
+        Developer</label>
+      <label style=" font-weight: normal;">
+        <input name="prefer" value="back-end-dev" type="checkbox" class="input-checkbox" />Back-End Developer</label>
+      <label style=" font-weight: normal;"><input name="prefer" value="fullstack" type="checkbox" class="input-checkbox" />Full Stack
+        Developer</label>
+
+      <label style=" font-weight: normal;"><input name="prefer" value="data-science" type="checkbox" class="input-checkbox" />Data Scientist</label>
+      <label style=" font-weight: normal;"><input name="Dev-Ops" value="challenges" type="checkbox" class="input-checkbox" />Dev-Ops</label>
+      <label style=" font-weight: normal;"><input name="prefer" value="sde" type="checkbox" class="input-checkbox" />Software Engineer</label>
+      <label style=" font-weight: normal;"><input name="prefer" value="Blockchain" type="checkbox" class="input-checkbox" />Blockchain
+        Developer</label>
+
+      <label style=" font-weight: normal;"><input name="prefer" value="other" type="checkbox" class="input-checkbox" />Other</label>
+    </div>
+    <div class="form-group">
+      <p style="font-weight: bold;">
+        What would you like to Participate?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="Open Source">Open Source</option>
+        <option value="Fellowship">Fellowship</option>
+        <option value="community">Community Meetup</option>
+        <option value="hackathons">Hackathons</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <p style="font-weight: bold;">What would you like to tell us?</p>
+      <textarea id="comments" class="input-textarea" name="comment" ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="btn btn-primary" style="background-color: #00A66C;
+      margin-left: 340px;">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

@@ -6,12 +6,14 @@
     width: 100%;
     height: auto;
     background-color: #E9E9E9;
+    margin: 0;
+    padding: 0;
   }
 .container .btn {
     position: absolute;
     top: 60%;
     left: 10%;
-    background-color: #3EABD2;
+    background-color: #00A66C ;
     color: white;
     font-size: 16px;
     padding: 16px 30px;
@@ -34,22 +36,37 @@
     position: absolute;
     font-family:cursive;
   }
-.layer2{
+  .layer5{
     background-color: white;
+    width: 100%;
+      color: black;
+      font-family: cursive;
+      font-style: italic;
+      padding: 16px 30px;
+      left: 10%;
+      scroll-behavior: smooth;
+      padding: 50px;
+    }
+.layer2{
+  background-color: lightgray;
+  width: 100%;
     color: black;
     font-family: cursive;
     font-style: italic;
     padding: 16px 30px;
     left: 10%;
+    scroll-behavior: smooth;
+    padding: 50px;
+    display: flex;
   }
-#head{
+.head{
     font-size: 50px;
     font-weight: 100;
     color: black;
   }
 #contin{
     font-size: 1.2em;
-    padding-top: 16px;
+    padding-top: 40px;
     padding-bottom: 16px;
   }
   article {
@@ -65,12 +82,12 @@
     display: flex;
   }
   .layer3{
-    background-color: lightgray;
+    background-color: white;
+    padding: 50px;
 
   }
   h1{
     text-align: center;
-    padding-top: 16px;
     padding-bottom: 16px;
     font-weight: bold;
   }
@@ -82,10 +99,8 @@
   width: 50px;
   margin-left: 20%;
 }
-.layer4{
-  background-color: white;
-  color: black;
-  text-align: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
+.imgdoc{
+  width: 400px;
+  height: 400px;
+  padding-left: 300px;
 }
