@@ -34,7 +34,7 @@
     font-size: 50px;
     padding: 16px 30px;
     position: absolute;
-    font-family:cursive;
+    font-family: cursive;
   }
   .layer5{
     background-color: white;
@@ -84,7 +84,7 @@
   .layer3{
     background-color: white;
     padding: 50px;
-
+    padding-top: 100px;
   }
   h1{
     text-align: center;
@@ -97,6 +97,7 @@
 .layer3 img{
   display: block;
   width: 50px;
+  height: 50px;
   margin-left: 20%;
 }
 .imgdoc{
@@ -168,7 +169,6 @@ animation: txtFlyIn .3s linear;
   background-color:rgba(255,255,255,0.9);
   display:inline-block;
   color:#000;
-  box-size:border-box;
   max-width:63%;
   max-width: 22em;
   font-size: 32px;
@@ -182,4 +182,8 @@ animation: txtFlyIn .3s linear;
 @keyframes txtFlyIn{
   0% { transform:translateX(-100%); }
   100% { transform:translateX(0%); }
+}
+.lastlayer{
+  padding-top: 100px;
+  padding-bottom: 200px;
 }

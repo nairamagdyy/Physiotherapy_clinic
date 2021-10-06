@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SurveyComponent } from './user/survey/survey.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './user/sidenav/sidenav.component';
+import { SwiperComponent } from './swiper/swiper.component';
+import { SwiperModule } from "swiper/angular";
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { SidenavComponent } from './user/sidenav/sidenav.component';
     UserComponent,
     SurveyComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    SwiperComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SwiperModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

@@ -1,0 +1,56 @@
+<div class="background">
+<div >
+  <img src="https://img.freepik.com/free-vector/customer-feedback-concept-illustration_114360-7128.jpg?size=338&ext=jpg" 
+     alt="physical-therapy">
+</div>
+<swiper
+    style="--swiper-navigation-color: black;--swiper-pagination-color: black"
+    [speed]="600"
+    [parallax]="true"
+    [pagination]="{
+      clickable: true
+    }"
+    [navigation]="true"
+    class="mySwiper"
+  >
+
+    <div
+      slot="container-start"
+      class="parallax-bg"
+      style="background-color: lightgreen;"
+      data-swiper-parallax="-23%"
+    >
+  </div>
+    <ng-template swiperSlide >
+      <!--<div class="title" data-swiper-parallax="-300" >
+        WHAT OUR PATIENTS ARE SAYING</div>-->
+      <div class="subtitle" data-swiper-parallax="-200" style="color: black;">Ahmed Gamal</div>
+      <div class="text" data-swiper-parallax="-100">
+        <p style="color: black; padding-top: 10px;" >
+          "Wonderful. Great clinic. Made it a very easy draw ... no delay's. No pain involved. Very good, polite, knowledgeable and competent quite good."
+          "I would recommend it to anyone who needs care.""I would recommend it to anyone who needs care."
+        </p>
+      </div> </ng-template
+    ><ng-template swiperSlide>
+        <!--<div class="title" data-swiper-parallax="-300" >
+        WHAT OUR PATIENTS ARE SAYING</div>-->
+      <div class="subtitle" data-swiper-parallax="-200" style="color: black;">Ahmed Gamal</div>
+      <div class="text" data-swiper-parallax="-100">
+        <p style="color: black; padding-top: 10px;" >
+          "Wonderful. Great clinic. Made it a very easy draw ... no delay's. No pain involved. Very good, polite, knowledgeable and competent quite good."
+          "I would recommend it to anyone who needs care.""I would recommend it to anyone who needs care."
+        </p>
+      </div></ng-template
+    ><ng-template swiperSlide>
+        <!--<div class="title" data-swiper-parallax="-300" >
+        WHAT OUR PATIENTS ARE SAYING</div>-->
+      <div class="subtitle" data-swiper-parallax="-200" style="color: black;">Ahmed Gamal</div>
+      <div class="text" data-swiper-parallax="-100">
+        <p style="color: black; padding-top: 10px;" >
+          "Wonderful. Great clinic. Made it a very easy draw ... no delay's. No pain involved. Very good, polite, knowledgeable and competent quite good."
+          "I would recommend it to anyone who needs care.""I would recommend it to anyone who needs care."
+        </p>
+      </div>
+    </ng-template>
+  </swiper>
+  </div>
