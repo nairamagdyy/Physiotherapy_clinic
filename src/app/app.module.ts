@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './user/sidenav/sidenav.component';
 import { SwiperComponent } from './swiper/swiper.component';
 import { SwiperModule } from "swiper/angular";
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SwiperModule } from "swiper/angular";
     SurveyComponent,
     FooterComponent,
     SidenavComponent,
-    SwiperComponent
+    SwiperComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
