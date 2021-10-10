@@ -18,11 +18,6 @@ import { SwiperComponent } from './swiper/swiper.component';
 import { SwiperModule } from "swiper/angular";
 import { BookingComponent } from './user/booking/booking.component';
 import { SlotsComponent } from './slots/slots.component';
-import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
-import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
-import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService} from '@syncfusion/ej2-angular-schedule';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,16 +39,9 @@ import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, 
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    SwiperModule,
-    ScheduleModule,
-    ButtonModule
+    SwiperModule
   ],
-  providers: [authInterceptorProviders,DayService, 
-    WeekService, 
-    WorkWeekService, 
-    MonthService,
-    AgendaService,
-    MonthAgendaService],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
