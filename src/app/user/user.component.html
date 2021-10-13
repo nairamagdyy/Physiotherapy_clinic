@@ -2,6 +2,9 @@
   <div style="margin-left:25%;height:500px;">
     <div class="edit">
       <h3 class="manage">Manage profile </h3>
+      <div *ngFor="let user of content" >
+        {{user.title}}
+      </div>
       <article id="signup">
         <div class="card card-container">
           <form name="form" novalidate>

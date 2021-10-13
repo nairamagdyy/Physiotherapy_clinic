@@ -1,32 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-const AUTH_API = 'http://jsonplaceholder.typicode.com/users';
-
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   constructor(private http: HttpClient) { }
+  AUTH_API = 'http://localhost:44319/Magdy/Patient';
 
-  login(email: string, password: string): Observable<any> {
-    return this.http.post(AUTH_API + 'signin', {
-      email,
-      password
-    }, httpOptions);
-  }
-
-
-  register(username: string, email: string, password: string): Observable<any> {
-    return this.http.post(AUTH_API + 'register', {
-      username,
-      email,
-      password
-    }, httpOptions);
+  register(Name: string, Occupation: string, Age: number,
+     Length: number, Weight: number,
+     BloodPressure: string, RBS: string,
+     MobileNumber: string, Email: string){
+    return this.http.post(this.AUTH_API , {
+      Name, Occupation, Age,
+      Length, Weight, BloodPressure, 
+      RBS, MobileNumber, Email
+    });
   }
 }

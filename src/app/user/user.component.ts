@@ -1,6 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { UserService } from '../services/user.service';
-
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -8,18 +9,17 @@ import { UserService } from '../services/user.service';
   providers:[UserService]
 })
 export class UserComponent implements OnInit {
-  content?: string;
-
-  constructor(private userService: UserService) { }
+  content: any;
+  
+ API_URL = 'https://jsonplaceholder.typicode.com/posts';
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(
-      data => {
-        this.content = data;
-      },
-      error_ => {
-        this.content = JSON.parse(error_.error).message;
-      }
+    
+    this.http.get(this.API_URL).subscribe(
+        data=>{
+            this.content = data;
+        }
     );
-  }
+}
 }

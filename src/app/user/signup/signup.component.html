@@ -13,32 +13,86 @@
       <div class="card card-container">
         <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
           <div class="form-group">
-            <label for="firstname">Firstname</label>
-            <input type="text" class="form-control" name="firstname" [(ngModel)]="form.firstname" required minlength="3"
-              maxlength="20" #username="ngModel" />
-          </div>
-          <div class="form-group">
-            <label for="lastname">Lastname</label>
-            <input type="text" class="form-control" name="lastname" [(ngModel)]="form.lastname" required minlength="3"
-              maxlength="20" #username="ngModel" />
-          </div>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required minlength="3"
-              maxlength="20" #username="ngModel" />
-            <div class="alert-danger" *ngIf="username.errors && f.submitted">
-              <div *ngIf="username.errors.required">Username is required</div>
-              <div *ngIf="username.errors.minlength">
-                Username must be at least 3 characters
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="form.Name" required  maxlength="25"  #name="ngModel" />
+            <div class="alert-danger" *ngIf="name.errors && f.submitted">
+              <div *ngIf="name.errors.required">Name is required</div>
+              <div *ngIf="name.errors.maxlength">
+                Name must be at most 25 characters
               </div>
-              <div *ngIf="username.errors.maxlength">
-                Username must be at most 20 characters
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Occupation">Occupation</label>
+            <input type="text" class="form-control" name="Occupation" [(ngModel)]="form.Occupation" 
+            required  maxlength="25"  #Occupation="ngModel" />
+            <div class="alert-danger" *ngIf="Occupation.errors && f.submitted">
+              <div *ngIf="Occupation.errors.required">Occupation is required</div>
+              <div *ngIf="Occupation.errors.maxlength">
+                Occupation must be at most 25 characters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Age">Age</label>
+            <input type="number" class="form-control" name="Age" [(ngModel)]="form.Age" 
+            required  min="4" max="100"  #Age="ngModel" />
+            <div class="alert-danger" *ngIf="Age.errors && f.submitted">
+              <div *ngIf="Age.errors.required">Age is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Length">Length</label>
+            <input type="number" class="form-control" name="Length" [(ngModel)]="form.Length" 
+            required  min="20" max="200"  #Length="ngModel" />
+            <div class="alert-danger" *ngIf="Length.errors && f.submitted">
+              <div *ngIf="Length.errors.required">Length is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Weight">Weight</label>
+            <input type="number" class="form-control" name="Weight" [(ngModel)]="form.Weight" 
+            required  min="20" max="200"  #Weight="ngModel" />
+            <div class="alert-danger" *ngIf="Weight.errors && f.submitted">
+              <div *ngIf="Weight.errors.required">Weight is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="BloodPressure">BloodPressure</label>
+            <input type="text" class="form-control" name="BloodPressure" [(ngModel)]="form.BloodPressure" 
+            required  maxlength="25"  #BloodPressure="ngModel" />
+            <div class="alert-danger" *ngIf="BloodPressure.errors && f.submitted">
+              <div *ngIf="BloodPressure.errors.required">BloodPressure is required</div>
+              <div *ngIf="BloodPressure.errors.maxlength">
+                BloodPressure must be at most 25 characters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="RBS">RBS</label>
+            <input type="text" class="form-control" name="RBS" [(ngModel)]="form.RBS" 
+            required  maxlength="25"  #RBS="ngModel" />
+            <div class="alert-danger" *ngIf="RBS.errors && f.submitted">
+              <div *ngIf="RBS.errors.required">RBS is required</div>
+              <div *ngIf="RBS.errors.maxlength">
+                RBS must be at most 25 characters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="MobileNumber">MobileNumber</label>
+            <input type="text" class="form-control" name="MobileNumber" [(ngModel)]="form.MobileNumber" 
+            required  maxlength="11"  #MobileNumber="ngModel" />
+            <div class="alert-danger" *ngIf="MobileNumber.errors && f.submitted">
+              <div *ngIf="MobileNumber.errors.required">MobileNumber is required</div>
+              <div *ngIf="MobileNumber.errors.maxlength">
+                MobileNumber must be at most 11 characters
               </div>
             </div>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email
+            <input type="email" class="form-control" name="email" [(ngModel)]="form.Email" required email
               #email="ngModel" />
             <div class="alert-danger" *ngIf="email.errors && f.submitted">
               <div *ngIf="email.errors.required">Email is required</div>
@@ -48,20 +102,9 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required
-              minlength="6" #password="ngModel" />
-            <div class="alert-danger" *ngIf="password.errors && f.submitted">
-              <div *ngIf="password.errors.required">Password is required</div>
-              <div *ngIf="password.errors.minlength">
-                Password must be at least 6 characters
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
             <button class="btn">Sign Up</button>
           </div>
-          <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          <div class="alert alert-warning" *ngIf="isSignUpFailed">
             Signup failed!<br />{{ errorMessage }}
           </div>
         </form>
