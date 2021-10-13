@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   constructor(private http: HttpClient) { }
-  AUTH_API = 'http://localhost:44319/Magdy/Patient';
+  AUTH_API = '';
 
   register(Name: string, Occupation: string, Age: number,
      Length: number, Weight: number,
