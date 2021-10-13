@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,14 +8,33 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   form = {
-    email: "",
-    password: ""
+    Name: "",
+    Email: ""
   };
 
-  constructor() { }
+  isLoggedIn = false;
+  isLoginFailed = false;
+  errorMessage = '';
+  roles: string[] = [];
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
-  
+
+  onSubmit(): void {
+    const { Name, Email } = this.form;
+
+    this.authService.login(Name, Email).subscribe(
+      data => {
+        this.isLoginFailed = false;
+        this.isLoggedIn = true;
+      },
+      err => {
+        this.errorMessage = err.error.message;
+        this.isLoginFailed = true;
+      }
+    );
+  }
 
 }

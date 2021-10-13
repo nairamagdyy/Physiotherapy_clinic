@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
   constructor(private http: HttpClient) { }
-  AUTH_API = '';
+  AUTH_API = 'https://jsonplaceholder.typicode.com/users';
 
   register(Name: string, Occupation: string, Age: number,
      Length: number, Weight: number,
@@ -16,6 +16,12 @@ export class AuthService {
       Name, Occupation, Age,
       Length, Weight, BloodPressure, 
       RBS, MobileNumber, Email
+    });
+  }
+  login(Name: string, Email: string) {
+    return this.http.post(this.AUTH_API , {
+      Name,
+      Email
     });
   }
 }

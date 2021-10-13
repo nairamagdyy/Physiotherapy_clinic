@@ -3,21 +3,63 @@
     <article id="login">
       <p id="myaccount">Login</p>
       <div class="card card-container">
-        <form name="form" novalidate>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" name="email"  required email
-              />
+        <form *ngIf="!isLoggedIn"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate>
+        <div class="form-group">
+          <label for="Name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="Name"
+            [(ngModel)]="form.Name"
+            required
+            #Name="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="Name.errors && f.submitted"
+          >
+            Name is required!
           </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" required
-              minlength="6"  />
+        </div>
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            name="Email"
+            [(ngModel)]="form.Email"
+            required
+            #Email="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="Email.errors && f.submitted"
+          >
+            Email is required!
           </div>
+        </div>
           <div class="form-group">
             <button class="btn">Login</button>
           </div>
+          <div class="form-group">
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="f.submitted && isLoginFailed"
+            >
+              Login failed: {{ errorMessage }}
+            </div>
+          </div>
         </form>
+        <div class="alert alert-success" *ngIf="isLoggedIn">
+          Logged in as {{ roles }}.
+        </div>
       </div>
     </article>
     <article class="welcome">
