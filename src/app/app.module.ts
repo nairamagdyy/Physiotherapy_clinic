@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './user/login/login.component';
@@ -18,6 +18,10 @@ import { SwiperComponent } from './swiper/swiper.component';
 import { SwiperModule } from "swiper/angular";
 import { BookingComponent } from './user/booking/booking.component';
 import { SlotsComponent } from './slots/slots.component';
+import { CreateQuestionsComponent } from './create-questions/create-questions.component';
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,14 +36,18 @@ import { SlotsComponent } from './slots/slots.component';
     SidenavComponent,
     SwiperComponent,
     BookingComponent,
-    SlotsComponent
+    SlotsComponent,
+    CreateQuestionsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    SwiperModule
+    SwiperModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
